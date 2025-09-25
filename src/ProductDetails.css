@@ -1,9 +1,9 @@
-/* ProductDetails.css */
+/* Overlay */
 .product-details-overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -16,28 +16,29 @@
   to { opacity: 1; }
 }
 
+/* Modal */
 .product-details-modal {
-  background: #ffffff;
+  background: #fff;
   border-radius: 20px;
   max-width: 800px;
   width: 95vw;
   padding: 2.5rem 2rem;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 14px 48px rgba(0, 0, 0, 0.18);
   position: relative;
   animation: scaleIn 0.25s ease;
 }
 
 @keyframes scaleIn {
-  from { opacity: 0; transform: scale(0.96); }
+  from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
 }
 
-/* Close button */
+/* Close Button */
 .close-btn {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: #f0f0f0;
+  background: #f4f4f4;
   border: none;
   font-size: 1.6rem;
   border-radius: 50%;
@@ -47,13 +48,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #555;
+  color: #444;
   transition: all 0.25s ease;
 }
 .close-btn:hover {
   background: #ff6b6b;
   color: #fff;
-  transform: rotate(90deg);
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
 }
 
 /* Layout */
@@ -69,8 +71,12 @@
   height: 240px;
   object-fit: cover;
   border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
   border: 1px solid #f2f2f2;
+  transition: transform 0.25s ease;
+}
+.details-image:hover {
+  transform: scale(1.02);
 }
 
 .details-info {
@@ -82,10 +88,12 @@
   margin-top: 0;
   font-size: 2rem;
   font-weight: 700;
-  color: #2c2c2c;
+  color: #2b2b2b;
   margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
+/* Text styles */
 .details-brand,
 .details-category,
 .details-desc,
@@ -97,17 +105,17 @@
 }
 
 .details-discount {
-  color: #ff6b6b;
+  color: #ff4c4c;
   font-weight: 600;
 }
 
-/* Add to cart button */
+/* Add to Cart Button */
 .add-cart-btn {
   background: linear-gradient(135deg, #6a5acd, #836fff);
   color: #fff;
   border: none;
   border-radius: 10px;
-  padding: 0.75rem 1.6rem;
+  padding: 0.8rem 1.8rem;
   font-size: 1.05rem;
   margin-top: 1.2rem;
   font-weight: 600;
@@ -117,7 +125,8 @@
 }
 .add-cart-btn:hover {
   background: linear-gradient(135deg, #5a4ac7, #715cff);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(106, 90, 205, 0.3);
 }
 
 /* Gallery */
@@ -135,9 +144,10 @@
   border-radius: 10px;
   border: 1px solid #e5e5e5;
   cursor: pointer;
-  transition: transform 0.2s ease, border 0.2s ease;
+  transition: transform 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
 }
 .gallery-img:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
   border: 1px solid #6a5acd;
+  box-shadow: 0 4px 10px rgba(106, 90, 205, 0.25);
 }
