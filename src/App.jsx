@@ -82,7 +82,7 @@ function App() {
   return (
     <div className="shop-container">
       <header className="shop-header">
-        <h1>E-Commerce Shop</h1>
+        <h1>MMA E-Commerce Shop</h1>
         <div className="shop-filters">
           <SearchBar
             suggestions={suggestions.slice(0, 8)}
