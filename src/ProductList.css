@@ -1,4 +1,4 @@
-/* ProductList.css */
+
 .product-list {
   display: flex;
   flex-wrap: wrap;
@@ -9,7 +9,7 @@
   max-width: 1400px;
 }
 
-/* Each product card */
+
 .product-card {
   background: #ffffff;
   border-radius: 18px;
@@ -28,7 +28,7 @@
   box-shadow: 0 10px 28px rgba(0,0,0,0.12);
 }
 
-/* Product image */
+
 .product-card img {
   width: 180px;
   height: 180px;
@@ -42,7 +42,7 @@
   transform: scale(1.05);
 }
 
-/* Product title */
+
 .product-card h3 {
   font-size: 1.2rem;
   font-weight: 600;
@@ -50,7 +50,7 @@
   margin: 0.5rem 0;
 }
 
-/* Product price */
+
 .product-card .price {
   font-size: 1.1rem;
   font-weight: 700;
@@ -58,7 +58,7 @@
   margin: 0.4rem 0 0.8rem 0;
 }
 
-/* Add to cart button */
+
 .product-card button {
   background: linear-gradient(135deg, #6a5acd, #836fff);
   color: #fff;
