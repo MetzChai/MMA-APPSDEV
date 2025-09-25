@@ -1,0 +1,66 @@
+/* SearchBar.css */
+.search-bar {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto 1rem auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  border-radius: 28px;
+  border: 1px solid #e0e0e0;
+  font-size: 1.1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  background: #fafafa;
+}
+
+.search-input:focus {
+  border: 1.5px solid #7b5fff;
+  box-shadow: 0 6px 16px rgba(123, 95, 255, 0.2);
+  background: #fff;
+}
+
+.suggestions-list {
+  position: absolute;
+  left: 0; right: 0;
+  background: #fff;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin: 0;
+  padding: 0.5rem 0;
+  list-style: none;
+  z-index: 10;
+  max-height: 220px;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.suggestions-list li {
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.suggestions-list li:hover {
+  background: #f0f0ff;
+  border-left: 3px solid #7b5fff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(123, 95, 255, 0.4);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
